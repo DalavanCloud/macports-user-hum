@@ -13,7 +13,7 @@ license             BSD
 homepage            http://chasen-legacy.sourceforge.jp/
 description         Japanese morphological analysis system
 long_description    ChaSen is a tool to analyze a text according to a set of dictionaries that \
-                    specifies grammer, part of speech of words, and so on.
+                    specifies grammer, part of speech of words, and so on. \
                     This port depends on ChaSen base analyzer and a Japanese dictionary.
 
 distfiles
@@ -86,10 +86,10 @@ if {![variant_isset naistjdic]} {
 destroot {
     set dest_chasen ${destroot}${prefix}/etc/chasen
     file mkdir ${dest_chasen}
-    system "cd ${dest_chasen} && ln -sf chasenrc-${dicname} chasenrc"
+    ln -s chasenrc-${dicname} ${dest_chasen}/chasenrc
     foreach encoding {utf8 sjis} {
         if {[variant_isset ${encoding}]} {
-            system "cd ${dest_chasen} && ln -sf chasenrc-${dicname}-${encoding} chasenrc-${encoding}"
+            ln -s chasenrc-${dicname}-${encoding} ${dest_chasen}/chasenrc-${encoding}
         }
     }
 }
