@@ -1,0 +1,24 @@
+# $Id$
+
+PortSystem      1.0
+name            mecab-jumandic-eucjp
+version         5.1-20070304
+revision        1
+
+replaced_by     mecab-jumandic
+
+categories      textproc japanese
+maintainers     gmail.com:rsky0711 hum openmaintainer
+platforms       darwin
+description     Alternate dictionary for MeCab (jumandic/euc-jp)
+long_description ${description}
+homepage        http://mecab.sourceforge.net/
+
+distfiles
+
+pre-configure {
+    ui_error "Please do not install this port since it has been replaced by 'mecab-jumandic'."
+    return -code error
+}
+
+livecheck.type  none

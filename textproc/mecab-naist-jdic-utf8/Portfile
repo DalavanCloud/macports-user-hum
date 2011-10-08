@@ -1,0 +1,36 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+
+set dicname         naist-jdic
+set encoding        utf8
+set charset         utf8
+name                mecab-${dicname}-${encoding}
+version             0.6.3-20100801
+categories          textproc japanese
+maintainers         hum openmaintainer
+platforms           darwin
+license             BSD
+
+homepage            http://sourceforge.jp/projects/naist-jdic/
+description         ${dicname} of ${encoding} encoding for MeCab
+long_description    ${description}
+
+dist_subdir         mecab
+distname            mecab-${dicname}-${version}
+
+master_sites        sourceforge_jp:mecab/48487/
+
+depends_lib         port:mecab-base
+checksums           rmd160  eb18c0ccfc283f2414635ba46ba1a2313932fe2a \
+                    sha256  a8e04a8717992887f8ba19fc9edf1e24b9e465c8635eb72c85140762c73bb23e
+
+patchfiles          patch-Makefile.in.diff
+
+supported_archs     noarch
+configure.args      --with-mecab-config=${prefix}/bin/mecab-config \
+                    --with-charset=${charset} \
+                    --with-dicdir=${prefix}/lib/mecab/dic/${dicname}-${encoding}
+
+livecheck.type      none
