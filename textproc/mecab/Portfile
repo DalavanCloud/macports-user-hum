@@ -63,7 +63,7 @@ variant utf8 description {Deprecated, install mecab-utf8 instead} {
 destroot {
     set dest_dic ${destroot}${prefix}/lib/mecab/dic
     file mkdir ${dest_dic}
-    system "cd ${dest_dic}; ln -sf ${dicname}-${encoding} sysdic"
+    ln -s ${dicname}-${encoding} ${dest_dic}/sysdic
 }
 
 livecheck.type      none

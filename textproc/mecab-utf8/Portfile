@@ -50,9 +50,9 @@ variant naistjdic conflicts ipadic jumandic description {Use naist-jdic} {
 }
 
 destroot {
-    set dicdir ${destroot}${prefix}/lib/mecab/dic
-    file mkdir ${dicdir}
-    system "cd ${dicdir}; ln -sf ${dicname}-${encoding} sysdic"
+    set dest_dic ${destroot}${prefix}/lib/mecab/dic
+    file mkdir ${dest_dic}
+    ln -s ${dicname}-${encoding} ${dest_dic}/sysdic
 }
 
 livecheck.type      none
