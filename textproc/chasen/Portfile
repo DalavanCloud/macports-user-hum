@@ -13,7 +13,7 @@ license             BSD
 homepage            http://chasen-legacy.sourceforge.jp/
 description         Japanese morphological analysis system
 long_description    ChaSen is a tool to analyze a text according to a set of dictionaries that \
-                    specifies grammer, part of speech of words, and so on. \
+                    specifies grammar, part of speech of words, and so on. \
                     This port depends on ChaSen base analyzer and a Japanese dictionary.
 
 distfiles
