@@ -25,6 +25,7 @@ checksums           rmd160  6d32e07e9fce6096a93603d148b6ee71a0a912c9 \
                     sha256  f4b830877b51c770cb8491efb6e7bccf0c9011d3682351e5507eb864b0729bb1
 
 depends_build       port:nkf
+depends_lib         port:chasen-base
 
 supported_archs     noarch
 configure.args      --with-chasenrc-path=${destroot}${prefix}/etc/chasen/chasenrc-${dicname}-${encoding}
