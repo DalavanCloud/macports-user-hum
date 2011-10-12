@@ -37,6 +37,7 @@ variant utf8 description {Add chasen-utf8 for UTF-8 texts} {
         reinplace "s|@RC_FILE@|${prefix}/etc/chasen/chasenrc-${encoding}|" \
             ${script}
     }
+    notes-append  "You may run 'chasen-utf8' for UTF-8 texts."
 }
 
 variant sjis description {Add chasen-sjis for Shift-JIS texts} {
@@ -49,9 +50,10 @@ variant sjis description {Add chasen-sjis for Shift-JIS texts} {
         reinplace "s|@RC_FILE@|${prefix}/etc/chasen/chasenrc-${encoding}|" \
             ${script}
     }
+    notes-append  "You may run 'chasen-sjis' for Shift-JIS texts."
 }
 
-default_variants    +eucjp
+default_variants    +eucjp +utf8
 
 set dicname         ipadic
 
