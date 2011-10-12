@@ -24,8 +24,8 @@ checksums           rmd160  ceb4a7c064ba5bf0d356d6db0e64b644b88dbc54 \
 
 patchfiles          patch-configure.diff
 
-depends_lib         path:include/darts.h:darts \
-                    port:libiconv
+depends_build       path:include/darts.h:darts
+depends_lib         port:libiconv
 
 post-extract {
     foreach f {tests/test-chasen.sh tests/test-dic.sh} {
