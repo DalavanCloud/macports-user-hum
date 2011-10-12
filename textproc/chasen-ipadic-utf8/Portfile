@@ -11,7 +11,7 @@ version             2.7.0
 categories          textproc japanese
 maintainers         takanori hum openmaintainer
 homepage            http://sourceforge.jp/projects/${dicname}/
-description         IPA dictionary for ChaSen Japanese morphological analysis system
+description         IPA dictionary of UTF-8 encoding for ChaSen
 long_description    ${description}
 platforms           darwin
 license             BSD

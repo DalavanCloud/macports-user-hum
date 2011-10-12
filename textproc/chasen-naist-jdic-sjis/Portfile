@@ -11,7 +11,7 @@ version             0.4.3
 categories          textproc japanese
 maintainers         takanori hum openmaintainer
 homepage            http://sourceforge.jp/projects/${dicname}/
-description         NAIST Japanese dictionary for ChaSen
+description         NAIST Japanese dictionary of Shift-JIS encoding for ChaSen
 long_description    ${description}
 platforms           darwin
 license             BSD
