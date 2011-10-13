@@ -27,6 +27,8 @@ checksums           rmd160  6d32e07e9fce6096a93603d148b6ee71a0a912c9 \
 depends_build       port:nkf
 depends_lib         port:chasen-base
 
+variant dartsclone description {Use darts-clone instead of darts} {}
+
 supported_archs     noarch
 configure.args      --with-chasenrc-path=${destroot}${prefix}/etc/chasen/chasenrc-${dicname}-${encoding}
 
