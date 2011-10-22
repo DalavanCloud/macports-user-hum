@@ -7,7 +7,7 @@ set dicname         naist-jdic
 set encoding        utf8
 set charset         utf8
 name                mecab-${dicname}-${encoding}
-version             0.6.3-20100801
+version             0.6.3b-20111013
 categories          textproc japanese
 maintainers         hum openmaintainer
 platforms           darwin
@@ -23,8 +23,8 @@ distname            mecab-${dicname}-${version}
 master_sites        sourceforge_jp:mecab/48487/
 
 depends_lib         port:mecab-base
-checksums           rmd160  eb18c0ccfc283f2414635ba46ba1a2313932fe2a \
-                    sha256  a8e04a8717992887f8ba19fc9edf1e24b9e465c8635eb72c85140762c73bb23e
+checksums           rmd160  0f0bce78a7e304cfe6f3083cd5c947f95ddb7e0d \
+                    sha256  cb37700dc9a77b953f2bf3b15b49cfecd67848530a2cf8abcb09b594ca5628cc
 
 patchfiles          patch-Makefile.in.diff
 
